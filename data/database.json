@@ -1,0 +1,35 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Cristian",
+      "email": "cristian@example.com",
+      "senhaHash": "b011e016f91dbbc872d2992b156d4044:bacfa78dde9eb5c00e123bdef09062e9cc70aabe71c842a3e4291295096e7653ca8ce16106a016e8f35b493f212d3c4dc7e39b6d73b4e0878c585542fb1fa36a",
+      "criadoEm": "2026-03-23T14:01:20.165Z"
+    }
+  ],
+  "sessoes": [
+    {
+      "id": 1,
+      "token": "54f87235cc3689091c40414483fad14662b9f2922d69c0d4",
+      "usuarioId": 1,
+      "criadaEm": "2026-03-23T14:01:20.170Z"
+    }
+  ],
+  "tarefas": [
+    {
+      "id": 1,
+      "texto": "Servidor e banco conectados",
+      "usuarioId": 0,
+      "usuarioNome": "Sistema",
+      "criadaEm": "2026-03-23T00:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "texto": "Validar login e cadastro",
+      "usuarioId": 1,
+      "usuarioNome": "Cristian",
+      "criadaEm": "2026-03-23T14:01:20.304Z"
+    }
+  ]
+}

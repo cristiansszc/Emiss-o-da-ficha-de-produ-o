@@ -1,0 +1,5 @@
+
+> meusite@0.0.0 messages:server
+> node backend/server.js
+
+Servidor de mensagens em http://localhost:3002

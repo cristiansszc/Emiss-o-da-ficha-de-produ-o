@@ -1,0 +1,286 @@
+:root {
+  font-family:
+    "Inter",
+    "Segoe UI Variable Text",
+    "Segoe UI",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+:root,
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #0f172a;
+  --background-elevated: #111827;
+  --background-soft: #1e293b;
+  --text: #e5e7eb;
+  --text-secondary: #94a3b8;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --primary-active: #1d4ed8;
+  --secondary: #6366f1;
+  --secondary-hover: #4f46e5;
+  --secondary-active: #4338ca;
+  --border: rgba(148, 163, 184, 0.22);
+  --border-strong: rgba(148, 163, 184, 0.34);
+  --card: #111827;
+  --card-muted: rgba(30, 41, 59, 0.88);
+  --card-soft: rgba(30, 41, 59, 0.72);
+  --surface-contrast: rgba(255, 255, 255, 0.06);
+  --focus-ring: rgba(59, 130, 246, 0.34);
+  --success: #22c55e;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --shadow-soft: 0 10px 24px rgba(2, 6, 23, 0.2);
+  --shadow-medium: 0 16px 42px rgba(2, 6, 23, 0.28);
+  --shadow-large: 0 28px 64px rgba(2, 6, 23, 0.36);
+  --panel-hover-shadow: 0 24px 56px rgba(2, 6, 23, 0.34);
+  --card-hover-shadow: 0 18px 36px rgba(2, 6, 23, 0.22);
+
+  --page-background:
+    radial-gradient(circle at 0% 0%, rgba(59, 130, 246, 0.18), transparent 28%),
+    radial-gradient(circle at 100% 0%, rgba(99, 102, 241, 0.16), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(14, 165, 233, 0.08), transparent 32%),
+    linear-gradient(180deg, #0b1120 0%, #0f172a 46%, #0a1020 100%);
+  --page-text: var(--text);
+  --panel-bg:
+    linear-gradient(180deg, rgba(17, 24, 39, 0.96), rgba(15, 23, 42, 0.98));
+  --panel-border: rgba(148, 163, 184, 0.18);
+  --panel-shadow: var(--shadow-large);
+  --hero-glow: radial-gradient(circle, rgba(59, 130, 246, 0.18), transparent 68%);
+  --text-primary: var(--text);
+  --text-muted: #9ca3af;
+  --surface-soft: rgba(30, 41, 59, 0.82);
+  --surface-soft-strong: rgba(30, 41, 59, 0.96);
+  --surface-muted: rgba(15, 23, 42, 0.88);
+  --surface-border: var(--border);
+  --button-ghost-bg: rgba(15, 23, 42, 0.8);
+  --button-ghost-bg-hover: rgba(30, 41, 59, 0.92);
+  --button-ghost-border: rgba(148, 163, 184, 0.24);
+  --danger-soft-bg: rgba(239, 68, 68, 0.14);
+  --danger-soft-bg-hover: rgba(239, 68, 68, 0.2);
+  --danger-soft-text: #fecaca;
+  --danger-soft-border: rgba(248, 113, 113, 0.22);
+  --input-bg: rgba(15, 23, 42, 0.74);
+  --input-border: var(--border);
+  --input-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  --action-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+  --action-text: #eff6ff;
+  --action-shadow: 0 14px 34px rgba(37, 99, 235, 0.26);
+  --kicker-bg: rgba(59, 130, 246, 0.16);
+  --kicker-color: #bfdbfe;
+  --kicker-border: rgba(147, 197, 253, 0.16);
+  --feedback-success-bg: rgba(34, 197, 94, 0.14);
+  --feedback-success-text: #bbf7d0;
+  --feedback-error-bg: rgba(239, 68, 68, 0.16);
+  --feedback-error-text: #fecaca;
+  --editor-banner-border: rgba(99, 102, 241, 0.2);
+  --editor-banner-bg:
+    linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(99, 102, 241, 0.12));
+  --collapsed-bg: rgba(15, 23, 42, 0.66);
+  --collapsed-border: rgba(148, 163, 184, 0.2);
+  --sheet-bg: rgba(15, 23, 42, 0.64);
+  --sheet-head-bg: rgba(15, 23, 42, 0.94);
+  --sheet-border: rgba(148, 163, 184, 0.16);
+  --material-preview-border: rgba(99, 102, 241, 0.18);
+  --material-preview-bg:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(15, 23, 42, 0.4));
+  --theme-track-bg: rgba(17, 24, 39, 0.88);
+  --theme-track-border: var(--border);
+  --theme-option-text: var(--text-secondary);
+  --theme-option-active-bg: rgba(59, 130, 246, 0.16);
+  --theme-option-active-text: #eff6ff;
+  --theme-shadow: var(--shadow-soft);
+  --link-color: #93c5fd;
+  --row-hover-bg: rgba(59, 130, 246, 0.08);
+  --row-zebra-bg: rgba(255, 255, 255, 0.015);
+  --card-highlight: rgba(255, 255, 255, 0.05);
+  --sidebar-edge: rgba(255, 255, 255, 0.04);
+  --scene-bg:
+    linear-gradient(160deg, rgba(30, 41, 59, 0.92), rgba(15, 23, 42, 0.96));
+  --scene-overlay-a: rgba(59, 130, 246, 0.18);
+  --scene-overlay-b: rgba(99, 102, 241, 0.16);
+  --scene-line: rgba(148, 163, 184, 0.26);
+  --scene-kicker-bg: rgba(59, 130, 246, 0.14);
+  --scene-kicker-text: #bfdbfe;
+  --scene-kicker-border: rgba(147, 197, 253, 0.18);
+  --module-button-top: #2563eb;
+  --module-button-bottom: #1d4ed8;
+  --module-button-text: #eff6ff;
+  --module-button-shadow: rgba(37, 99, 235, 0.24);
+  --module-button-ring: rgba(59, 130, 246, 0.24);
+  --module-button-glow: rgba(255, 255, 255, 0.18);
+  --module-button-frame: rgba(148, 163, 184, 0.18);
+  --module-button-frame-inner: rgba(255, 255, 255, 0.05);
+  --module-button-utility-top: #3b82f6;
+  --module-button-utility-bottom: #2563eb;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #f9fafb;
+  --background-elevated: #ffffff;
+  --background-soft: #eef2ff;
+  --text: #111827;
+  --text-secondary: #475569;
+  --primary: #2563eb;
+  --primary-hover: #1d4ed8;
+  --primary-active: #1e40af;
+  --secondary: #4f46e5;
+  --secondary-hover: #4338ca;
+  --secondary-active: #3730a3;
+  --border: rgba(15, 23, 42, 0.12);
+  --border-strong: rgba(15, 23, 42, 0.2);
+  --card: #ffffff;
+  --card-muted: #f8fafc;
+  --card-soft: rgba(255, 255, 255, 0.9);
+  --surface-contrast: rgba(15, 23, 42, 0.03);
+  --focus-ring: rgba(37, 99, 235, 0.2);
+  --success: #16a34a;
+  --danger: #dc2626;
+  --warning: #d97706;
+  --shadow-soft: 0 8px 22px rgba(15, 23, 42, 0.08);
+  --shadow-medium: 0 18px 40px rgba(15, 23, 42, 0.1);
+  --shadow-large: 0 26px 60px rgba(15, 23, 42, 0.12);
+  --panel-hover-shadow: 0 28px 58px rgba(15, 23, 42, 0.14);
+  --card-hover-shadow: 0 18px 34px rgba(15, 23, 42, 0.1);
+
+  --page-background:
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.1), transparent 26%),
+    radial-gradient(circle at 100% 0%, rgba(79, 70, 229, 0.09), transparent 22%),
+    radial-gradient(circle at 50% 100%, rgba(14, 165, 233, 0.06), transparent 30%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 56%, #eef2f7 100%);
+  --page-text: var(--text);
+  --panel-bg:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 252, 0.98));
+  --panel-border: rgba(15, 23, 42, 0.08);
+  --panel-shadow: var(--shadow-large);
+  --hero-glow: radial-gradient(circle, rgba(37, 99, 235, 0.1), transparent 70%);
+  --text-primary: var(--text);
+  --text-muted: #64748b;
+  --surface-soft: rgba(255, 255, 255, 0.94);
+  --surface-soft-strong: #ffffff;
+  --surface-muted: #f8fafc;
+  --surface-border: var(--border);
+  --button-ghost-bg: #f8fafc;
+  --button-ghost-bg-hover: #eef2ff;
+  --button-ghost-border: rgba(15, 23, 42, 0.12);
+  --danger-soft-bg: rgba(220, 38, 38, 0.08);
+  --danger-soft-bg-hover: rgba(220, 38, 38, 0.12);
+  --danger-soft-text: #b91c1c;
+  --danger-soft-border: rgba(220, 38, 38, 0.14);
+  --input-bg: rgba(255, 255, 255, 0.98);
+  --input-border: rgba(15, 23, 42, 0.14);
+  --input-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  --action-gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+  --action-text: #f8fbff;
+  --action-shadow: 0 12px 28px rgba(37, 99, 235, 0.16);
+  --kicker-bg: rgba(37, 99, 235, 0.1);
+  --kicker-color: #1d4ed8;
+  --kicker-border: rgba(37, 99, 235, 0.14);
+  --feedback-success-bg: rgba(34, 197, 94, 0.12);
+  --feedback-success-text: #166534;
+  --feedback-error-bg: rgba(239, 68, 68, 0.12);
+  --feedback-error-text: #991b1b;
+  --editor-banner-border: rgba(79, 70, 229, 0.12);
+  --editor-banner-bg:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(79, 70, 229, 0.06));
+  --collapsed-bg: rgba(248, 250, 252, 0.94);
+  --collapsed-border: rgba(15, 23, 42, 0.12);
+  --sheet-bg: rgba(255, 255, 255, 0.98);
+  --sheet-head-bg: rgba(248, 250, 252, 0.98);
+  --sheet-border: rgba(15, 23, 42, 0.08);
+  --material-preview-border: rgba(37, 99, 235, 0.12);
+  --material-preview-bg:
+    linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(255, 255, 255, 0.96));
+  --theme-track-bg: rgba(255, 255, 255, 0.98);
+  --theme-track-border: var(--border);
+  --theme-option-text: var(--text-secondary);
+  --theme-option-active-bg: rgba(37, 99, 235, 0.12);
+  --theme-option-active-text: #111827;
+  --theme-shadow: var(--shadow-soft);
+  --link-color: #1d4ed8;
+  --row-hover-bg: rgba(37, 99, 235, 0.06);
+  --row-zebra-bg: rgba(15, 23, 42, 0.02);
+  --card-highlight: rgba(255, 255, 255, 0.84);
+  --sidebar-edge: rgba(255, 255, 255, 0.72);
+  --scene-bg:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.98));
+  --scene-overlay-a: rgba(37, 99, 235, 0.12);
+  --scene-overlay-b: rgba(79, 70, 229, 0.1);
+  --scene-line: rgba(37, 99, 235, 0.18);
+  --scene-kicker-bg: rgba(37, 99, 235, 0.08);
+  --scene-kicker-text: #1d4ed8;
+  --scene-kicker-border: rgba(37, 99, 235, 0.12);
+  --module-button-top: #3b82f6;
+  --module-button-bottom: #2563eb;
+  --module-button-text: #f8fbff;
+  --module-button-shadow: rgba(37, 99, 235, 0.18);
+  --module-button-ring: rgba(37, 99, 235, 0.18);
+  --module-button-glow: rgba(255, 255, 255, 0.14);
+  --module-button-frame: rgba(255, 255, 255, 0.26);
+  --module-button-frame-inner: rgba(255, 255, 255, 0.08);
+  --module-button-utility-top: #2563eb;
+  --module-button-utility-bottom: #1d4ed8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--background);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--page-text);
+  background: var(--page-background);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 24%),
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.04), transparent 36%);
+  opacity: 0.8;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  color: inherit;
+}
+
+code {
+  font-family: "Cascadia Code", Consolas, monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
