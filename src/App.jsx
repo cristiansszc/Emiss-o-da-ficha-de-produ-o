@@ -201,7 +201,10 @@ function buildVchhmGroups(rows) {
     groups.get(key).rows.push(row);
   });
 
-  return Array.from(groups.values());
+  return Array.from(groups.values()).map((group) => ({
+    ...group,
+    rows: sortRowsByCreatedOrder(group.rows),
+  }));
 }
 
 function resolveClientName(value) {
@@ -223,6 +226,14 @@ function parseEfficiency(value) {
   }
 
   return parsed;
+}
+
+function sortRowsByCreatedOrder(rows) {
+  return [...rows].sort((a, b) => {
+    const first = String(a.criadoEm ?? a.atualizadoEm ?? "");
+    const second = String(b.criadoEm ?? b.atualizadoEm ?? "");
+    return first.localeCompare(second);
+  });
 }
 
 function computePasswordStrength(password) {
@@ -2907,7 +2918,7 @@ export default function App() {
   const selectedSkuRows = useMemo(() => {
     const key = normalizeText(productionForm.sku);
     if (!key) return [];
-    return workspace.vchhmRows.filter((row) => row.skuKey === key);
+    return sortRowsByCreatedOrder(workspace.vchhmRows.filter((row) => row.skuKey === key));
   }, [productionForm.sku, workspace.vchhmRows]);
 
   const productionMetrics = useMemo(
@@ -3977,10 +3988,12 @@ export default function App() {
           onPrintSaved={(sheet) =>
             openPrintView(
               sheet,
-              workspace.vchhmRows.filter(
-                (row) =>
-                  row.skuKey === sheet.skuKey ||
-                  normalizeText(row.sku) === normalizeText(sheet.sku),
+              sortRowsByCreatedOrder(
+                workspace.vchhmRows.filter(
+                  (row) =>
+                    row.skuKey === sheet.skuKey ||
+                    normalizeText(row.sku) === normalizeText(sheet.sku),
+                ),
               ),
             )
           }
