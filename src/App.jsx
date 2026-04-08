@@ -1261,6 +1261,15 @@ function VchhmModule(props) {
                   </label>
 
                   <label className="field-block">
+                    <span>Descricao</span>
+                    <input
+                      value={vchhmForm.descricao}
+                      onChange={(event) => updateVchhmField("descricao", event.target.value)}
+                      placeholder="Descricao da operacao"
+                    />
+                  </label>
+
+                  <label className="field-block">
                     <span>Tempo de preparacao (min)</span>
                     <input
                       value={vchhmForm.tempoPreparacao}
